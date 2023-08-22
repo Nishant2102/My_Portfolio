@@ -3,7 +3,7 @@
 /* Styling for the content section */
 .section {
     /* ... (previous styles) */
-    background: url('/Images/Background image as index.webp') center/cover no-repeat fixed;
+    background: url('assets/Images/Background image as index.webp') center/cover no-repeat fixed;
     /* background-size: cover; */
     display: flex;
     justify-content: center;
