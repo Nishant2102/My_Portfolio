@@ -13,7 +13,7 @@ My Portfolio is a personal website showcasing my projects, skills, and experienc
 - Navigation bar to reach to a section quickly.
 
 ## Demo
-You can view a live demo of the website here(https://nishant2102.github.io/My_Portfolio/).
+You can view a live demo of the website [here](https://nishant2102.github.io/My_Portfolio/).
 
 ## Contact
 For any inquiries or feedback, you can reach me at:
