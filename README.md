@@ -10,7 +10,7 @@ My Portfolio is a personal website showcasing my projects, skills, and experienc
 
 ## Features
 - Sections for showcasing projects, skills, and experiences.
-- Contact form for users to reach out.
+- Navigation bar to reach to a section quickly.
 
 ## Demo
 You can view a live demo of the website here(https://nishant2102.github.io/My_Portfolio/).
