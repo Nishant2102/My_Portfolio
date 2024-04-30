@@ -1,12 +1,10 @@
 # My Portfolio
 
 ## Project Overview
-```c
 My Portfolio is a personal website showcasing my projects, skills, and experiences. It serves as a digital resume and a platform to share my work with others.
 
 
 ## Languages Used
-```c
 - HTML5
 - CSS3
 
