@@ -1,181 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Your Portfolio</title>
+    <title>Nishant Sharma | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #cbd5e1; /* slate-300 */
+        }
+        .glass-effect {
+            background: rgba(30, 41, 59, 0.5); /* slate-800 with opacity */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.5); /* slate-700 with opacity */
+        }
+        .accent-text {
+            color: #7dd3fc; /* sky-300 */
+        }
+        .section-heading {
+            color: #f8fafc; /* slate-50 */
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <!-- Navigation bar code here -->
-        <nav class="navbar">
-            <div class="container">
-                <h1 class="logo">Nishant Sharma</h1>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Qualification">Qualification</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center glass-effect">
+            <a href="#" class="text-2xl font-bold section-heading">Nishant Sharma</a>
+            <div class="hidden md:flex space-x-6 text-lg">
+                <a href="#about" class="hover:text-sky-300 transition duration-300">About</a>
+                <a href="#experience" class="hover:text-sky-300 transition duration-300">Experience</a>
+                <a href="#projects" class="hover:text-sky-300 transition duration-300">Projects</a>
+                <a href="#skills" class="hover:text-sky-300 transition duration-300">Skills</a>
+                <a href="#contact" class="hover:text-sky-300 transition duration-300">Contact</a>
             </div>
+            <button id="mobile-menu-button" class="md:hidden text-slate-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-slate-700">About</a>
+            <a href="#experience" class="block py-2 px-4 text-sm hover:bg-slate-700">Experience</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-slate-700">Projects</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-slate-700">Skills</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-slate-700">Contact</a>
+        </div>
     </header>
 
-    <section id="home" class="section">
-        <div class="background"></div>
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="content">
-                <h2>Welcome to My Portfolio</h2>
-                <img src="./Images/Nishant Sharma.jpeg" alt="Nishant Sharma" class="profile-image">
-                <p>I am Nishant Sharma</p>
-                <p>2nd year Chemical Engineering student</p>
-                <h1>IIT Jodhpur</h1>
-                <p>Date of Birth: 21st February 2006</p>
-                <hr></hr>
-                <h2>Skills</h2>
-                <ul>
-                    <li>
-                        <img src="./Images/C.png" alt="C">
-                        <img src="./Images/C++.png" alt="C++">
-                        <img src="./Images/python.png" alt="python">
-                        <img src="./Images/HTML.png" alt="HTML">
-                    </li>
-                    <li>
-                        <img src="./Images/CSS.png" alt="CSS">
-                        <img src="./Images/Canva.png" alt="Canva">
-                        <img src="./Images/Unity.png" alt="Unity">
-                        <img src="./Images/ros-noetic-ninjemys.svg" alt="ROS Noetic">
-                    </li>
-                </ul>
-                <hr></hr>
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[80vh] flex flex-col justify-center">
+            <h1 class="text-5xl md:text-7xl font-bold section-heading">Nishant Sharma</h1>
+            <p class="mt-4 text-xl md:text-2xl text-slate-400">Chemical Engineering Student at <span class="accent-text">IIT Jodhpur</span>.</p>
+            <p class="mt-6 max-w-3xl text-lg">
+                I'm a passionate engineer exploring the intersection of robotics, AI, and chemical processes. My goal is to leverage technology to build innovative solutions for complex challenges.
+            </p>
+            <div class="mt-8 flex space-x-6">
+                <a href="https://www.linkedin.com/in/nishantsharma2102" target="_blank" class="text-slate-400 hover:text-sky-300 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://github.com" target="_blank" class="text-slate-400 hover:text-sky-300 transition duration-300"> <!-- Add your GitHub link here -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                </a>
+                <a href="mailto:nishantshw2102@gmail.com" class="text-slate-400 hover:text-sky-300 transition duration-300">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Other sections (about, portfolio, contact) can be added similarly -->
-
-    <!-- for my about section -->
-    <section id="about" class="section">
-        <div class="background"></div>
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="content">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-image1">
-                        <img src="./Images/IIT Jodhpur.jpg" alt="IIT Jodhpur Campus">
-                    </div>
-                    <div class="about-text">
-                        <p>I am currently a 2nd year student at IIT Jodhpur, pursuing a degree in Chemical Engineering. I have a strong passion for programming and web development, which I have been pursuing alongside my academic studies.</p>
-                        <p>My journey at IIT Jodhpur has been an incredible experience. The academic challenges, diverse campus environment, and opportunities for personal growth have all contributed to shaping me into the person I am today.</p>
-                    </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <h2 class="text-4xl font-bold mb-8 section-heading">About Me</h2>
+            <div class="grid md:grid-cols-5 gap-10 items-center">
+                <div class="md:col-span-3 text-lg leading-relaxed">
+                    <p>
+                        I am a dedicated Chemical Engineering undergraduate at the Indian Institute of Technology, Jodhpur. My academic journey is complemented by a deep fascination for the practical application of technology, especially in robotics, automation, and data-driven process control. 
+                    </p>
+                    <br>
+                    <p>
+                         From designing photocatalytic reactors to engineering soft robotic arms with computer vision, I thrive on hands-on projects that bridge theoretical knowledge with real-world impact. I am proficient in Python, C++, and various machine learning frameworks, and I'm always eager to apply my interdisciplinary skills to solve challenging problems and contribute to innovative teams.
+                    </p>
                 </div>
-                <div class="about-content">
-                    <div class="about-image2">
-                        <img src="./Images/Programmer.png" alt="Programming">
-                    </div>
-                    <div class="about-text">
-                        <p>Programming has been my creative outlet and a means of solving real-world problems. I enjoy working on projects that require both technical skills and innovative thinking. It's amazing how programming empowers us to turn ideas into reality.</p>
-                        <p>When I'm not coding or studying, you can find me exploring new technologies, playing basketball, and spending quality time with friends.</p>
+                <div class="md:col-span-2 flex justify-center">
+                    <div class="w-64 h-64 rounded-full bg-slate-800 border-4 border-sky-300 flex items-center justify-center">
+                        <!-- You can place a profile picture URL here -->
+                        <img src="https://placehold.co/256x256/0f172a/7dd3fc?text=NS" alt="Nishant Sharma" class="rounded-full">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="Qualification" class="section">
-        <div class="background"></div>
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="content">
-                <h2>Projects and Qualifications </h2>
-                <div class="portfolio-section">
-                    <h3>Projects</h3>
-                    <div class="projects-container">
-                        <a href="https://github.com/Nishant2102/Quiz_Game" class="project">
-                                <img src="./Images/quiz game.jpeg" alt="Quiz Game">
-                                <h4>Quiz Game</h4>
-                                <p>Written in C</p>
-                        </a>
-                        <a href="https://github.com/Nishant2102/Gym_Home" class="project">
-                                <img src="./Images/Gym Website.jpeg" alt="Gym Website">
-                                <h4>Gym Website</h4>
-                                <p>Under progress</p>
-                        </a>
-                        <a href="https://github.com/Nishant2102/My_Portfolio" class="project">
-                                <img src="./Images/portfolio.jpeg" alt="Portfolio Page">
-                                <h4>My Portfolio</h4>
-                                <p>This is it</p>
-                        </a>
-                        <!-- <div class="project">
-                            <img src="Sign In page.jpg" alt="Sign In page">
-                            <h4>Sign In Page</h4>
-                            <p>Think to work on next</p>
-                        </div> -->
-                        <!-- Add more projects here -->
-
-                        
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <h2 class="text-4xl font-bold mb-12 section-heading">Experience</h2>
+            <div class="relative border-l-2 border-slate-700 pl-10">
+                <!-- Timeline Item -->
+                <div class="mb-12">
+                    <div class="absolute -left-3.5 mt-1.5 h-6 w-6 rounded-full bg-sky-300"></div>
+                    <p class="text-sm text-slate-400">May 2024 - July 2024</p>
+                    <h3 class="text-2xl font-semibold section-heading mt-1">Summer Research Intern</h3>
+                    <p class="text-lg text-slate-300">IIT Roorkee</p>
+                    <ul class="mt-4 list-disc list-inside text-slate-400 space-y-2">
+                        <li>Engineered a soft robotic arm with integrated piezoelectric sensors for precise control and actuators for haptic feedback.</li>
+                        <li>Utilized a Unity-based VR platform and CNN-powered computer vision for real-time motion tracking and grasping.</li>
+                    </ul>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-slate-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">CNN</span>
+                        <span class="bg-slate-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Computer Vision</span>
+                        <span class="bg-slate-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">PyTorch</span>
+                        <span class="bg-slate-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Unity</span>
+                        <span class="bg-slate-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">C#</span>
+                        <span class="bg-slate-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Arduino IDE</span>
                     </div>
                 </div>
-                <div class="portfolio-section">
-                    <h3>Qualifications</h3>
-                    <div class="project">
-                        <img src="./Images/IIT Jodhpur logo.jpg" alt="IIT Jodhpur logo">
-                        <h4>Sophomore in Chemical Engineering</h4>
-                        <h4>IIT Jodhpur</h4>
+                <!-- Add more experience items here if needed -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold mb-12 section-heading">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Project Card 1 -->
+                <div class="glass-effect rounded-lg p-6 hover:border-sky-300 transition duration-300 border border-transparent transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold section-heading">Innovative Cooling & Dehumidification Solutions</h3>
+                    <p class="mt-2 text-slate-400">Designed a MATLAB/Simulink model of a vapor compression AC system with energy-efficient control logic and refrigerant optimization.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Simulink</span>
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Matlab</span>
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Optimization</span>
                     </div>
-                    <div class="project">
-                        <img src="./Images/robotics.png" alt="Robotics">
-                        <h4>Robotics Society</h4>
-                        <h4>Core Member</h4>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="glass-effect rounded-lg p-6 hover:border-sky-300 transition duration-300 border border-transparent transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold section-heading">DAQ Based Reactive Plant Design</h3>
+                    <p class="mt-2 text-slate-400">Developed a LabVIEW protocol for precise valve automation in gas mixing systems, integrating DAQ for efficient control.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">LabVIEW</span>
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">G Programming</span>
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">DAQ Analysis</span>
                     </div>
-                    <div class="project">
-                        <img src="./Images/Nexus.jpeg" alt="Nexus">
-                        <h4>NEXUS(Space society)</h4>
-                        <h4>Core Member</h4>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="glass-effect rounded-lg p-6 hover:border-sky-300 transition duration-300 border border-transparent transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold section-heading">Photocatalytic Reactor Design</h3>
+                    <p class="mt-2 text-slate-400">Led R&D of an optimized photocatalytic reactor to enhance photon utilization and product yield through innovative geometries.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">SolidWorks</span>
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Reactor Design</span>
                     </div>
-                    <div class="project">
-                        <img src="./Images/RAID.jpg" alt="RAID">
-                        <h4>RAID (AI society)</h4>
-                        <h4>active participant</h4>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="glass-effect rounded-lg p-6 hover:border-sky-300 transition duration-300 border border-transparent transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold section-heading">AR/VR Motion Capture</h3>
+                    <p class="mt-2 text-slate-400">Developed smart socks with pressure sensors and used CNNs to analyze signals for real-time 3D character animation in Unity.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">CNN</span>
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Unity</span>
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">C#</span>
+                        <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Arduino</span>
                     </div>
-                    <div class="project">
-                        <img src="./Images/devlup.jpg" alt="Devlup">
-                        <h4>Devlup labs (Web Dev society)</h4>
-                        <h4>active participant</h4>
-                    </div>
-                    <div class="project">
-                        <img src="./Images/Ateliers.jpg" alt="Ateliers">
-                        <h4>Ateliers(Art society)</h4>
-                        <h4>Active Participants</h4>
-                    </div>
-                    <!-- <div class="qualification">
-                        <h4>Web Development Bootcamp</h4>
-                        <p>Online, 2022</p>
-                    </div> -->
-                    <!-- Add more qualifications here -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="background"></div>
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="content">
-                <h2>Contact Me</h2>
-                <div class="contact-icons">
-                    <a href="https://www.linkedin.com/in/nishant-sharma-2521b8259" target="_blank"><img src="./Images/linked in.png" alt="LinkedIn"></a>
-                    <a href="mailto:b22ch017@gmail.com"><img src="./Images/gmail.png" alt="Gmail"></a>
-                    <a href="https://github.com/Nishant2102" target="_blank"><img src="./Images/github.png" alt="GitHub"></a>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold mb-12 section-heading">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold section-heading mb-4">Programming</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>C/C++</li>
+                        <li>Python</li>
+                        <li>HTML/CSS/JS</li>
+                        <li>SQL</li>
+                        <li>C#</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold section-heading mb-4">Frameworks & Libraries</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>PyTorch</li>
+                        <li>Scikit-learn</li>
+                        <li>Pandas / NumPy</li>
+                        <li>ReactJS / Next.JS</li>
+                        <li>Flask / Streamlit</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold section-heading mb-4">Tools & Platforms</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>AWS / GCP</li>
+                        <li>Unity</li>
+                        <li>Jupyter Notebook</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold section-heading mb-4">Engineering Software</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>MATLAB & Simulink</li>
+                        <li>LabVIEW</li>
+                        <li>Aspen Plus / Hysys</li>
+                        <li>SolidWorks</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center">
+             <h2 class="text-4xl font-bold mb-8 section-heading">Get In Touch</h2>
+             <p class="max-w-2xl mx-auto text-lg text-slate-400">
+                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of an innovative team. Feel free to reach out to me.
+             </p>
+             <a href="mailto:nishantshw2102@gmail.com" class="mt-8 inline-block bg-sky-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-sky-600 transition-colors duration-300">
+                 Say Hello
+             </a>
+        </section>
 
+    </main>
     
+    <!-- Footer -->
+    <footer class="border-t border-slate-800">
+        <div class="container mx-auto px-6 py-6 text-center text-slate-500">
+            <p>&copy; 2024 Nishant Sharma. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for(let i=0; i<mobileMenuLinks.length; i++) {
+            mobileMenuLinks[i].addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
