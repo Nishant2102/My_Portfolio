@@ -3,6 +3,11 @@
 ## Project Overview
 My Portfolio is a personal website showcasing my projects, skills, and experiences. It serves as a digital resume and a platform to share my work with others.
 
+<img width="1897" height="933" alt="image" src="https://github.com/user-attachments/assets/b78e075c-b915-44e7-a161-14a9e62c68c6" />
+
+<img width="1897" height="933" alt="image" src="https://github.com/user-attachments/assets/3158462f-099c-4bfc-8aa9-37dce43692c4" />
+
+
 
 ## Languages Used
 - HTML5
